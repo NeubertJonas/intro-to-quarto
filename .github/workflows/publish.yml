@@ -18,5 +18,6 @@ jobs:
       - name: Render and Publish 
         uses: quarto-dev/quarto-actions/publish@v2
         with:
+          render: false
           target: quarto-pub
           QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
