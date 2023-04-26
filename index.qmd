@@ -33,7 +33,7 @@ R User Group Maastricht
 :::
 
 ::: notes
-Hi everybody! Thank you so much for joining today's session. I am so excited to introduce Quarto and many thanks to Laura and the R-Ladies St. Louis co-organizers for having me today.
+Hi everybody! Thank you so much for joining today's session. I am so excited to introduce Quarto for the R User Group here in Maastricht.
 :::
 
 # Introduction {.r-stretch}
