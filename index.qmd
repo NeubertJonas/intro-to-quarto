@@ -1,6 +1,4 @@
 ---
-project:
-  output-dir: _output
 format:
   revealjs: 
     theme: [default, custom.css, styles.scss]
@@ -55,10 +53,10 @@ My name is Isabella Velásquez. I work at RStudio, soon to be Posit, and have be
 ## Instructions {.small}
 
 ::: incremental
--   Slides: <https://ivelasq.quarto.pub/intro-to-quarto/>
--   Session repo with instructions: <https://github.com/ivelasq/2022-10-27_intro-to-quarto>
+-   Slides: <https://neubert.quarto.pub/intro-to-quarto/>
+-   Session repo with instructions: <https://github.com/NeubertJonas/intro-to-quarto>
 -   Exercise repo: <https://github.com/ivelasq/intro-to-quarto-exercises>
--   rstudio.cloud Project: <https://rstudio.cloud/content/4823293>
+-   Original repo by Isabella Velásquez: <https://ivelasq.quarto.pub/intro-to-quarto/>
 :::
 
 . . .
@@ -68,9 +66,8 @@ My name is Isabella Velásquez. I work at RStudio, soon to be Posit, and have be
 
 To follow along with the exercises, please be sure that you:
 
--   Are on the latest version of RStudio v2022.07 or later and have cloned the exercise repo
--   ~~Or, have a rstudio.cloud account and can access the project~~
--   And, have a <https://quartopub.com/> account.
+-   Are on the latest version of RStudio (v2023.04) and have cloned the exercise repo
+-   And, have a <https://quartopub.com/> account (optional).
 :::
 
 ::: notes
