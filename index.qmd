@@ -1,4 +1,6 @@
 ---
+project:
+  output-dir: _output
 format:
   revealjs: 
     theme: [default, custom.css, styles.scss]
@@ -67,7 +69,7 @@ My name is Isabella Velásquez. I work at RStudio, soon to be Posit, and have be
 To follow along with the exercises, please be sure that you:
 
 -   Are on the latest version of RStudio v2022.07 or later and have cloned the exercise repo
--   Or, have a rstudio.cloud account and can access the project
+-   ~~Or, have a rstudio.cloud account and can access the project~~
 -   And, have a <https://quartopub.com/> account.
 :::
 
@@ -913,21 +915,21 @@ If using the visual editor, you won't need to learn much markdown syntax for aut
 
 ### Images and Links
 
-+--------------------------------+------------------------------+
-| Markdown Syntax                | Output                       |
-+================================+==============================+
-| ```                            | <https://quarto.org>         |
-| <https://quarto.org>           |                              |
-| ```                            |                              |
-+--------------------------------+------------------------------+
-| ```                            | [Quarto](https://quarto.org) |
-| [Quarto](https://quarto.org)   |                              |
-| ```                            |                              |
-+--------------------------------+------------------------------+
-| ```                            | ![](penguin.jpg)             |
-| ![](penguin.jpg)               |                              |
-| ```                            |                              |
-+--------------------------------+------------------------------+
++-------------------------------+------------------------------+
+| Markdown Syntax               | Output                       |
++===============================+==============================+
+| ```                           | <https://quarto.org>         |
+| <https://quarto.org>          |                              |
+| ```                           |                              |
++-------------------------------+------------------------------+
+| ```                           | [Quarto](https://quarto.org) |
+| [Quarto](https://quarto.org)  |                              |
+| ```                           |                              |
++-------------------------------+------------------------------+
+| ```                           | ![](penguin.jpg)             |
+| ![](penguin.jpg)              |                              |
+| ```                           |                              |
++-------------------------------+------------------------------+
 
 ::: aside
 Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cornelius Ventures</a> on <a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
