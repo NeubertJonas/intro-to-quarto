@@ -40,9 +40,9 @@ Hi everybody! Thank you so much for joining today's session. I am so excited to 
 
 ## Hello!
 
-My name is Isabella Velásquez.
+My name is Jonas Neubert.
 
-{{< fa brands twitter size=1.4xl >}} ivelasq3 \| {{< fa brands linkedin size=1.4xl >}} ivelasq \| {{< fa brands github size=1.4xl >}} ivelasq \| {{< fa browser size=1.4xl >}} ivelasq.rbind.io
+{{< fa brands twitter size=1.4xl >}} jonasjneubert \| {{< fa brands linkedin size=1.4xl >}} ivelasq \| {{< fa brands github size=1.4xl >}} ivelasq \| {{< fa browser size=1.4xl >}} ivelasq.rbind.io
 
 ![](images/intro.png){fig-align="center"}
 
