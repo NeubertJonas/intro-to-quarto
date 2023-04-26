@@ -12,8 +12,6 @@ format:
     background-transition: fade
     highlight-style: pygments
     footer: "https://neubert.quarto.pub/intro-to-quarto/"
-execute:
-  freeze: auto
 ---
 
 ##  {.title}
