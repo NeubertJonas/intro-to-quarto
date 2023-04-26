@@ -34,27 +34,13 @@ R User Group Maastricht
 Hi everybody! Thank you so much for joining today's session. I am so excited to introduce Quarto for the R User Group here in Maastricht.
 :::
 
-# Introduction {.r-stretch}
-
-## Hello!
-
-My name is Jonas Neubert.
-
-{{< fa brands twitter size=1.4xl >}} jonasjneubert \| {{< fa brands linkedin size=1.4xl >}} ivelasq \| {{< fa brands github size=1.4xl >}} ivelasq \| {{< fa browser size=1.4xl >}} ivelasq.rbind.io
-
-![](images/intro.png){fig-align="center"}
-
-::: notes
-My name is Isabella Velásquez. I work at RStudio, soon to be Posit, and have been an R user for many years. I am a co-organizer for R-Ladies Seattle, as well. Just a bit about me, I am an avid hiker and love cats, especially my cat, Kitty. I am also a digital illustration beginner, as you will see in my presentation today.
-:::
-
 ## Instructions {.small}
 
 ::: incremental
 -   Slides: <https://neubert.quarto.pub/intro-to-quarto/>
--   Session repo with instructions: <https://github.com/NeubertJonas/intro-to-quarto>
+-   Materials available: <https://wviechtb.github.io/r-user-group/materials/materials.html>
 -   Exercise repo: <https://github.com/ivelasq/intro-to-quarto-exercises>
--   Original repo by Isabella Velásquez: <https://ivelasq.quarto.pub/intro-to-quarto/>
+-   Original slides by Isabella Velásquez: <https://ivelasq.quarto.pub/intro-to-quarto/>
 :::
 
 . . .
@@ -62,10 +48,10 @@ My name is Isabella Velásquez. I work at RStudio, soon to be Posit, and have be
 ::: callout-tip
 ## Workshop Prep
 
-To follow along with the exercises, please be sure that you:
+To follow along please be sure that you:
 
--   Are on the latest version of RStudio (v2023.04) and have cloned the exercise repo
--   And, have a <https://quartopub.com/> account (optional).
+-   Are on the latest version of RStudio (v2023.04) (Quarto is included automatically)
+-   Have downloaded the materials from GitHub
 :::
 
 ::: notes
@@ -99,14 +85,14 @@ built on Pandoc.
 </center>
 
 ::: notes
-Quarto is an open-source scientific and technical publishing system built on Pandoc. Let's break this down: Open-source: RStudio believes that it's better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. You can also see the source code and contribute, too. Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. We'll be showing some of these later on, but Quarto definitely has the scientific publishing audience in mind. Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats. Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format.Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write. We'll cover this as well.
+Quarto is an open-source scientific and technical publishing system built on Pandoc. Let's break this down: Open-source: RStudio believes that it's better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. You can also see the source code and contribute, too. Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. We'll be showing some of these later on, but Quarto definitely has the scientific publishing audience in mind. Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats. Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format. Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write. We'll cover this as well.
 :::
 
 ## Quarto Origins
 
 ::: incremental
 -   Open source project sponsored by RStudio, PBC
--   We've had 10 years of experience with R Markdown
+-   10+ years of experience with R Markdown
 -   But there are a lot of other programming languages...
 :::
 
@@ -119,7 +105,7 @@ Check out [JJ Allaire's R Medicine Keynote](https://www.youtube.com/watch?v=9jGc
 :::
 
 ::: notes
-R Markdown is a file format for making dynamic documents with R. However, you need to call it from R to use it, and it was depedentn on knitr. If you're a Python user, it means you need to install R to use R Markdown. Quarto is a tool that you can call from the terminal or command line, and is independent from the computational systems. Quarto supports knitr, and can support others. So, you can think of Quarto as the next generation R Markdown that is fundamentally multilanguage and multiengine.
+R Markdown is a file format for making dynamic documents with R. However, you need to call it from R to use it, and it was dependent on knitr. If you're a Python user, it means you need to install R to use R Markdown. Quarto is a tool that you can call from the terminal or command line, and is independent from the computational systems. Quarto supports knitr, and can support others. So, you can think of Quarto as the next generation R Markdown that is fundamentally multilanguage and multiengine.
 :::
 
 ## Quarto Goals
@@ -1582,7 +1568,6 @@ Let's try it!
 
 I hope that you enjoyed this intro to Quarto!
 
--   Keep in touch on Twitter: {{< fa brands twitter size=1.4xl >}} [ivelasq3](https://twitter.com/ivelasq3).
 -   Read the [Quarto documentation](https://quarto.org/).
 -   Check out [Awesome Quarto](https://github.com/mcanouil/awesome-quarto).
 
