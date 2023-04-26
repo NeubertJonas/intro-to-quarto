@@ -11,7 +11,7 @@ format:
     transition: fade
     background-transition: fade
     highlight-style: pygments
-    footer: "https://ivelasq.quarto.pub/intro-to-quarto/"
+    footer: "https://neubert.quarto.pub/intro-to-quarto/"
 ---
 
 ##  {.title}
@@ -21,10 +21,14 @@ Intro to [Quarto]{.flow}
 :::
 
 ::: {style="font-size: 80px"}
-Isabella Velásquez
+Jonas Neubert
 :::
 
-R-Ladies St. Louis
+R User Group Maastricht
+
+::: aside
+*Slide credits: [Isabella Velásquez](https://github.com/NeubertJonas/velasquez_intro-to-quarto)*
+:::
 
 ::: notes
 Hi everybody! Thank you so much for joining today's session. I am so excited to introduce Quarto and many thanks to Laura and the R-Ladies St. Louis co-organizers for having me today.
@@ -36,7 +40,7 @@ Hi everybody! Thank you so much for joining today's session. I am so excited to 
 
 My name is Isabella Velásquez.
 
-{{< fa brands twitter size=1.4xl >}} ivelasq3 | {{< fa brands linkedin size=1.4xl >}} ivelasq | {{< fa brands github size=1.4xl >}} ivelasq | {{< fa browser size=1.4xl >}} ivelasq.rbind.io
+{{< fa brands twitter size=1.4xl >}} ivelasq3 \| {{< fa brands linkedin size=1.4xl >}} ivelasq \| {{< fa brands github size=1.4xl >}} ivelasq \| {{< fa browser size=1.4xl >}} ivelasq.rbind.io
 
 ![](images/intro.png){fig-align="center"}
 
@@ -242,38 +246,40 @@ An engine is the tool that runs code. This is the underlying structure that crea
 
 ::: columns
 ::: {.column width="50%"}
-    ---
-    title: "ggplot2 demo"
-    format: 
-      html:
-        code-fold: true
-    ---
+````         
+---
+title: "ggplot2 demo"
+format: 
+  html:
+    code-fold: true
+---
 
-    ## Meet Quarto
+## Meet Quarto
 
-    Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-    ```{{r}}
-    #| label: plot-penguins
-    #| echo: false
-    #| message: false
-    #| warning: false
+```{{r}}
+#| label: plot-penguins
+#| echo: false
+#| message: false
+#| warning: false
 
-    library(tidyverse)
-    library(palmerpenguins)
+library(tidyverse)
+library(palmerpenguins)
 
-    ggplot(penguins, 
-           aes(x = flipper_length_mm, y = bill_length_mm)) +
-      geom_point(aes(color = species, shape = species)) +
-      scale_color_manual(values = c("darkorange","purple","cyan4")) +
-      labs(
-        title = "Flipper and bill length",
-        subtitle = "Dimensions for penguins at Palmer Station LTER",
-        x = "Flipper length (mm)", y = "Bill length (mm)",
-        color = "Penguin species", shape = "Penguin species"
-      ) +
-      theme_minimal()
-    ```
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()
+```
+````
 :::
 
 ::: {.column width="50%"}
@@ -301,38 +307,40 @@ The structure is similar for Jupyter, we just are running documents natively thr
 
 ::: columns
 ::: {.column width="50%"}
-    ---
-    title: "Palmer Penguins Demo"
-    format: 
-        html:
-            code-fold: true
-    jupyter: python3
-    ---
+````         
+---
+title: "Palmer Penguins Demo"
+format: 
+    html:
+        code-fold: true
+jupyter: python3
+---
 
-    ## Meet Quarto
+## Meet Quarto
 
-    Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-    ```{{python}}
-    #| echo: false
-    #| message: false
+```{{python}}
+#| echo: false
+#| message: false
 
-    import pandas as pd
-    import seaborn as sns 
-    from palmerpenguins import load_penguins
-    sns.set_style('whitegrid')
+import pandas as pd
+import seaborn as sns 
+from palmerpenguins import load_penguins
+sns.set_style('whitegrid')
 
-    penguins = load_penguins()
+penguins = load_penguins()
 
-    g = sns.lmplot(x="flipper_length_mm",
-                   y="body_mass_g",
-                   hue="species",
-                   height=7,
-                   data=penguins,
-                   palette=['#FF8C00','#159090','#A034F0']);
-    g.set_xlabels('Flipper Length');
-    g.set_ylabels('Body Mass');
-    ```
+g = sns.lmplot(x="flipper_length_mm",
+               y="body_mass_g",
+               hue="species",
+               height=7,
+               data=penguins,
+               palette=['#FF8C00','#159090','#A034F0']);
+g.set_xlabels('Flipper Length');
+g.set_ylabels('Body Mass');
+```
+````
 :::
 
 ::: {.column width="50%"}
@@ -688,7 +696,7 @@ ggplot(penguins,
 ```
 ````
 
-```
+```         
 See @fig-penguins.
 ```
 
@@ -702,20 +710,22 @@ See @fig-penguins.
 
 Put two plots side by side:
 
-    ```{{r}}
-    #| layout-ncol: 2
-    #| warning: false
+````         
+```{{r}}
+#| layout-ncol: 2
+#| warning: false
 
-    ggplot(penguins, 
-           aes(x = flipper_length_mm, y = bill_length_mm)) +
-      geom_point(aes(color = species, shape = species))
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species))
 
-    ggplot(data = penguins, aes(x = flipper_length_mm)) +
-      geom_histogram(aes(fill = species), 
-                     alpha = 0.5, 
-                     position = "identity")
+ggplot(data = penguins, aes(x = flipper_length_mm)) +
+  geom_histogram(aes(fill = species), 
+                 alpha = 0.5, 
+                 position = "identity")
 
-    ```
+```
+````
 
 ::: notes
 Let's add another plot to our chunk. Our goal is to display these plots side-by-side.
@@ -731,20 +741,22 @@ Put two plots side by side:
 
 Put two plots side by side:
 
-    ```{{r}}
-    #| layout: "[[30, 70]]"
-    #| warning: false
+````         
+```{{r}}
+#| layout: "[[30, 70]]"
+#| warning: false
 
-    ggplot(penguins, 
-           aes(x = flipper_length_mm, y = bill_length_mm)) +
-      geom_point(aes(color = species, shape = species))
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species))
 
-    ggplot(data = penguins, aes(x = flipper_length_mm)) +
-      geom_histogram(aes(fill = species), 
-                     alpha = 0.5, 
-                     position = "identity")
+ggplot(data = penguins, aes(x = flipper_length_mm)) +
+  geom_histogram(aes(fill = species), 
+                 alpha = 0.5, 
+                 position = "identity")
 
-    ```
+```
+````
 
 ## Code Options for All Chunks {.small}
 
@@ -757,22 +769,24 @@ Hide all of the code and just show the output by specifying `echo: false` within
 ::: {layout-ncol="2"}
 ### One chunk
 
-    ```{{r}}
-    #| label: plot-penguins
-    #| echo: false
+````         
+```{{r}}
+#| label: plot-penguins
+#| echo: false
 
-    ggplot(penguins, 
-           aes(x = flipper_length_mm, y = bill_length_mm)) +
-      geom_point(aes(color = species, shape = species)) +
-      scale_color_manual(values = c("darkorange","purple","cyan4")) +
-      labs(
-        title = "Flipper and bill length",
-        subtitle = "Dimensions for penguins at Palmer Station LTER",
-        x = "Flipper length (mm)", y = "Bill length (mm)",
-        color = "Penguin species", shape = "Penguin species"
-      ) +
-      theme_minimal()
-    ```
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()
+```
+````
 
 ### All chunks
 
@@ -818,8 +832,7 @@ format:
 
 **Needs downlit package**
 
-:::{layout-ncol=2}
-
+::: {layout-ncol="2"}
 ``` {{yaml}}
 ---
 title: "Hello, Quarto!"
@@ -830,7 +843,7 @@ format:
 ```
 
 ![](images/rstudio-code-link-preview.png)
-::::
+:::
 
 ::: notes
 You might want to fold it and allow readers to view it at their discretion. You can do this via the code-fold option. Remove the echo option we previously added and add the code-fold HTML format option.
@@ -872,17 +885,25 @@ If using the visual editor, you won't need to learn much markdown syntax for aut
 
 ### Formatting
 
-+-----------------------------------+-------------------------------+
-| Markdown Syntax                   | Output                        |
-+===================================+===============================+
-|     *italics* and **bold**        | *italics* and **bold**        |
-+-----------------------------------+-------------------------------+
-|     superscript^2^ / subscript~2~ | superscript^2^ / subscript~2~ |
-+-----------------------------------+-------------------------------+
-|     ~~strikethrough~~             | ~~strikethrough~~             |
-+-----------------------------------+-------------------------------+
-|     `verbatim code`               | `verbatim code`               |
-+-----------------------------------+-------------------------------+
++-------------------------------+-------------------------------+
+| Markdown Syntax               | Output                        |
++===============================+===============================+
+| ```                           | *italics* and **bold**        |
+| *italics* and **bold**        |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | superscript^2^ / subscript~2~ |
+| superscript^2^ / subscript~2~ |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | ~~strikethrough~~             |
+| ~~strikethrough~~             |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | `verbatim code`               |
+| `verbatim code`               |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
 
 ------------------------------------------------------------------------
 
@@ -890,15 +911,21 @@ If using the visual editor, you won't need to learn much markdown syntax for aut
 
 ### Images and Links
 
-+------------------------------------+---------------------------------+
-| Markdown Syntax                    | Output                          |
-+====================================+=================================+
-|     <https://quarto.org>           | <https://quarto.org>            |
-+------------------------------------+---------------------------------+
-|     [Quarto](https://quarto.org)   | [Quarto](https://quarto.org)    |
-+------------------------------------+---------------------------------+
-|     ![](penguin.jpg)               | ![](penguin.jpg)                |
-+------------------------------------+---------------------------------+
++--------------------------------+------------------------------+
+| Markdown Syntax                | Output                       |
++================================+==============================+
+| ```                            | <https://quarto.org>         |
+| <https://quarto.org>           |                              |
+| ```                            |                              |
++--------------------------------+------------------------------+
+| ```                            | [Quarto](https://quarto.org) |
+| [Quarto](https://quarto.org)   |                              |
+| ```                            |                              |
++--------------------------------+------------------------------+
+| ```                            | ![](penguin.jpg)             |
+| ![](penguin.jpg)               |                              |
+| ```                            |                              |
++--------------------------------+------------------------------+
 
 ::: aside
 Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cornelius Ventures</a> on <a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -1057,13 +1084,17 @@ You can add classes, attributes, and other identifiers to content using Divs and
 
 ### Divs
 
-    ::: {.border}
-    This content can be styled with a border
-    :::
+```         
+::: {.border}
+This content can be styled with a border
+:::
+```
 
 ### Spans
 
-    [This is *some text*]{.class key="val"}
+```         
+[This is *some text*]{.class key="val"}
+```
 
 ------------------------------------------------------------------------
 
@@ -1179,7 +1210,9 @@ Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&ut
 ![penguin 3](penguin.jpg)
 :::
 ```
+
 <br>
+
 ``` {{markdown}}
 ::: {layout="[[70,30], [100]]"}
 ![penguin 1](penguin.jpg)
@@ -1190,7 +1223,7 @@ Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&ut
 :::
 ```
 
----
+------------------------------------------------------------------------
 
 ### Divs
 
