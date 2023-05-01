@@ -1,4 +1,5 @@
 ---
+title: Introduction to Quarto
 format:
   revealjs: 
     theme: [default, custom.css, styles.scss]
@@ -231,19 +232,20 @@ An engine is the tool that runs code. This is the underlying structure that crea
 
 ::: columns
 ::: {.column width="50%"}
-````         
+```         
 ---
 title: "ggplot2 demo"
 format: 
   html:
     code-fold: true
 ---
+```
 
 ## Meet Quarto
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-```{{r}}
+```{r}
 #| label: plot-penguins
 #| echo: false
 #| message: false
@@ -264,7 +266,6 @@ ggplot(penguins,
   ) +
   theme_minimal()
 ```
-````
 :::
 
 ::: {.column width="50%"}
@@ -590,6 +591,24 @@ ggplot(penguins,
 ```
 ````
 
+```{mermaid}
+
+```
+
+```{r}
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()
+```
+
 ## Code Chunks {.small auto-animate="true"}
 
 ```` markdown
@@ -896,21 +915,21 @@ If using the visual editor, you won't need to learn much markdown syntax for aut
 
 ### Images and Links
 
-+-------------------------------+------------------------------+
-| Markdown Syntax               | Output                       |
-+===============================+==============================+
-| ```                           | <https://quarto.org>         |
-| <https://quarto.org>          |                              |
-| ```                           |                              |
-+-------------------------------+------------------------------+
-| ```                           | [Quarto](https://quarto.org) |
-| [Quarto](https://quarto.org)  |                              |
-| ```                           |                              |
-+-------------------------------+------------------------------+
-| ```                           | ![](penguin.jpg)             |
-| ![](penguin.jpg)              |                              |
-| ```                           |                              |
-+-------------------------------+------------------------------+
++------------------------------+------------------------------+
+| Markdown Syntax              | Output                       |
++==============================+==============================+
+| ```                          | <https://quarto.org>         |
+| <https://quarto.org>         |                              |
+| ```                          |                              |
++------------------------------+------------------------------+
+| ```                          | [Quarto](https://quarto.org) |
+| [Quarto](https://quarto.org) |                              |
+| ```                          |                              |
++------------------------------+------------------------------+
+| ```                          | ![](penguin.jpg)             |
+| ![](penguin.jpg)             |                              |
+| ```                          |                              |
++------------------------------+------------------------------+
 
 ::: aside
 Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cornelius Ventures</a> on <a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
