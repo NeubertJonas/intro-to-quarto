@@ -1,5 +1,7 @@
 # Intro to Quarto
-## 2022-10-27 R-Ladies St. Louis Presentation
+## Adapted for the R User Group Maastricht
+
+*README was not updated*
 
 <!-- badges: start -->
 [![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4823293)
